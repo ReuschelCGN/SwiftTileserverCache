@@ -4,14 +4,12 @@
 
 - Install Docker
 - Create a new folder to store the yml file in and change into it: `mkdir TileServer && cd TileServer`
-- Load the yml: `wget https://raw.githubusercontent.com/123FLO321/SwiftTileserverCache/master/docker-compose.yml`
-- Edit the docker-compose.yml file if you want to change defaults. Default will work fine.
-- Create a new folder to store TileServer data in and chagne into it: `mkdir TileServer && cd TileServer`
-- Get Download command from https://openmaptiles.com/downloads/planet/ for your region.
-- Download the file using wget.
-- Rename file to end in .mbtiles if it got named incorrectly
-- Change one layer back into the folder where the docker-compose.yml file is located: `cd ..`
-- Start and attach to logs: `docker-compose up -d && docker-compose logs -f`
+- Load the yml: `wget https://github.com/ReuschelCGN/SwiftTileserverCache/blob/userinterface/docker-compose.yml`
+- Edit the docker-compose.yml file and insert Username & Password for UI.
+- start cache container: `docker-compose up -d cache`
+- login into UI with serverip:9000 or url:9000 and add mbtiles in dataset
+- start tileserver container: `docker-compose up -d tileserver`
+- provide 1. fonts / 2. styles / 3. templates over UI
 
 ## Formats
 
