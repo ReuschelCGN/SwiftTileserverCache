@@ -9,7 +9,7 @@ services:
     volumes:
       - ./TileServer:/data
   cache:
-    image: 0815flo/swifttileservercache:latest
+    image: ghcr.io/reuschelcgn/swifttileservercache:userinterface
     container_name: tileserver-cache
     restart: unless-stopped
     tty: true
