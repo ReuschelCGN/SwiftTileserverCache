@@ -73,12 +73,8 @@ internal class StylesController {
                     missingIcons: missingIcons
                 )
             })
-        }).recover({ _ in
-            return .init(
-                missingFonts: ["error loading style"],
-                missingIcons: ["error loading style"]
-            )
         })
+
     }
 
     internal func addExternal(request: Request) throws -> EventLoopFuture<HTTPStatus> {
