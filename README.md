@@ -4,12 +4,14 @@
 
 - Install Docker
 - Create a new folder to store the yml file in and change into it: `mkdir TileServer && cd TileServer`
-- Load the yml: `wget https://github.com/ReuschelCGN/SwiftTileserverCache/blob/userinterface/docker-compose.yml`
-- Edit the docker-compose.yml file and insert Username & Password for UI.
-- start cache container: `docker-compose up -d cache`
-- login into UI with serverip:9000 or url:9000 and add mbtiles in dataset
-- start tileserver container: `docker-compose up -d tileserver`
-- provide 1. fonts / 2. styles / 3. templates over UI
+- Load the yml: `wget https://raw.githubusercontent.com/ReuschelCGN/SwiftTileserverCache/userinterface/docker-compose.yml`
+- Edit the docker-compose.yml file and dont forget to insert Username & Password for UI (User Interface).
+- Start cache container: `docker-compose up -d cache`
+- Login into UI with `serverip:9000` or `url:9000` and add mbtiles in **Datasets**
+- Start tileserver container: `docker-compose up -d tileserver`
+- upload 1. fonts -> 2. styles -> 3. templates over UI
+
+**!! Don't try to switch direct from Master to UI, it won't work.**
 
 ## Formats
 
